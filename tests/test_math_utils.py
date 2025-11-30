@@ -1,4 +1,10 @@
+import os, sys
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
 from app.math_utils import add, subtract
+
 
 def test_add():
     assert add(2, 3) == 5
